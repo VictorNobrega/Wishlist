@@ -3,6 +3,7 @@ br/com/challenger/wishlist/dto/MessageResponse$MessageResponseBuilder.class
 br/com/challenger/wishlist/service/Constant.class
 br/com/challenger/wishlist/exception/ProductAddedException.class
 br/com/challenger/wishlist/exception/EmptyWishlistException.class
+br/com/challenger/wishlist/dto/WishlistRequest$WishlistRequestBuilder.class
 br/com/challenger/wishlist/exception/MaxValueProductsException.class
 br/com/challenger/wishlist/WishlistApplication.class
 br/com/challenger/wishlist/dto/WishlistResponse.class

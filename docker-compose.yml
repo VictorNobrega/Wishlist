@@ -1,0 +1,14 @@
+version: "3"
+services:
+  wishlistmongodb:
+    image: mongo:latest
+    container_name: "wishlistmongodb"
+    ports:
+      - 27017:27017
+  wishlist-docker:
+    image: wishlist-docker:1.0
+    container_name: "wishlist-docker"
+    ports:
+      - 8080:8080
+    links:
+      - wishlistmongodb
