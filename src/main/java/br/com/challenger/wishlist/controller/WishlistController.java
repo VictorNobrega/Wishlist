@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,8 +34,7 @@ public class WishlistController {
                     @ApiResponse(responseCode = "400", description = "Caso o produto já exista na lista ou a quantidade de produtos na lista seja igual a 20.",
                             content = @Content(mediaType = "application/json",
                                     schema = @Schema(implementation = ResponseStatusException.class)))})
-    public ResponseEntity<MessageResponse> addWish(
-            @RequestBody WishlistRequest wishlistRequest) {
+    public ResponseEntity<MessageResponse> addWish(@Valid @RequestBody WishlistRequest wishlistRequest) {
         try {
             return new ResponseEntity<>(wishlistService.addProductInWishlist(wishlistRequest), HttpStatus.OK);
         } catch (ExceptionHandler e) {
