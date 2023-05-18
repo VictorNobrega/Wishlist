@@ -19,3 +19,5 @@
 
 Simular uma lista de desejos que receba requisições com a responsabilidade de adicionar, consultar, 
 verificar se o produto consta na lista de desejos e remover produtos com regras específicas para a Lista de Desejos.
+
+O preojeto utiliza Java 17, Spring Boot, Maven e MongoDB.
